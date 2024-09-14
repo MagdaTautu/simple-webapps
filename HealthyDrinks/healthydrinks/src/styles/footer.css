@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&family=Open+Sans:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+#footer .column{
+    width: 30%;
+    min-height: 250px;
+}
+
+.column h1{
+    font-size: 2rem;
+}
+
+.column p{
+    color: rgb(70, 70, 70);
+    font-family: montserrat;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+p.bold{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 25px;
+
+}
+
+p.number{
+    margin-top: 25px;
+}
+
+.column .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 30px;
+}
+.column svg{
+    font-size: 4rem;
+}
+
+.column path{
+    fill: #e82d60 ;
+}
+
+@media only screen and (min-width: 600px) and (max-width:1200px){
+    #footer{
+        flex-direction: column;
+    }
+    #footer .column{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #footer{
+        flex-direction: column;
+        padding: 0;
+
+    }
+    #footer .column{
+        width: 70%;
+    }
+}

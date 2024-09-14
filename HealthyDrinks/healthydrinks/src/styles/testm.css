@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@500&family=Playfair+Display:wght@800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#testimonials::before{
+content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: .5; */
+  background: url('../images/brush.png');
+  background-repeat: no-repeat;
+  background-position: 6% 20%;
+  background-size: 50%;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+#testimonials{
+    position: relative;
+    min-height: 30vh;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 100px 0;
+    padding: 0 170px;
+   
+    background-position: 80% 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+#testimonials h2{
+    font-family: "Playfair Display", serif;
+    font-size: 105px;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: bold;
+    cursor: default;
+}
+#testimonials .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    width: 100%;
+}
+
+#testimonials .content p.subtitle{
+    font-size: 30px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #e82d60;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: default;
+    text-align: center;
+}
+
+#testimonials .content p span {
+    font-weight: bold;
+}
+#testimonials .customers{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.customers .client{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers .client img{
+    width: 100px;
+    height: 70px;
+}
+
+.client .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.client .top .info .name{
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+}
+
+.client .top .info .profession{
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.client .bottom .review{
+    padding: 30px;
+    line-height: 1.86rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #a6a6a6;
+    border: 10px solid #f8f8f8;
+    margin-top: 30px;
+    position: relative;
+    background-color: #fff;
+}
+
+.client .bottom .review::before{
+    content: "";
+    border-top: 45px solid transparent;
+    border-left: 45px solid #f8f8f8;
+    position: absolute;
+    left: 70px;
+    z-index: -1;
+    top: -45px;
+}
+
+.stars path{
+    fill: #F7B614;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1200px){
+    #testimonials{
+        padding: 0;
+    }
+    #testimonials::before{
+        background-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #testimonials{
+        padding: 0;
+    }
+    #testimonials::before{
+        background-size: 100%;
+    }
+    #testimonials h2{
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #testimonials{
+        padding: 0;
+        flex-direction: column;
+    }
+    #testimonials::before{
+        background-size: 150%;
+        background-position: 40% 20%;
+    }
+    #testimonials h2{
+        font-size: 4.1rem;
+    }
+    #testimonials .content .customers{
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    #testimonials .content .customers .client{
+        width: 100%;
+    }
+}

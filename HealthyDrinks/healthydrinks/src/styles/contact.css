@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&family=Open+Sans:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:80vh;
+    margin-top: 0;
+}
+
+.contact, .contact .left{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.contact{
+    width:100%;
+    margin-top: 100px;
+}
+
+.contact .left{
+    width: 60%;
+    background: url('../images/Path\ 1.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position:-20% 0;
+    min-height: 150vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact .left img{
+    height: 850px;
+    width: 700px;
+    margin-bottom: 270px;
+    transform: rotate(18deg);
+    margin-left: -80px;
+}
+
+.contact .right{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 250px 0;
+}
+
+.contact form{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding-bottom: 100px;
+
+}
+
+.contact form label{
+    margin: 10px 0;
+    align-self: flex-start;
+
+}
+.contact form label span{
+    font-weight: 500;
+    font-family: montserrat;
+    font-size: 20px;
+}
+
+.contact form input::placeholder,.contact form textarea::placeholder{
+    color: rgb(49, 49, 49);
+    font-weight: 500;
+}
+.contact form .input-before{
+    width: 100%;
+    position: relative;
+}
+.contact form .input-before::before{
+    content: "";
+    position: absolute;
+    height: 40px;
+    background-color: #e82d60;
+    width: 100%;
+    bottom: 25px;
+    border-radius: 10px;
+    left: 0px;
+}
+
+.contact form #textarea::before{
+    content: "";
+    position: absolute;
+    height: 40px;
+    background-color: #e82d60;
+    width: 100%;
+    bottom: 29px;
+    border-radius: 10px;
+    left: 0px;
+}
+
+.contact form textarea{
+    height: 150px;
+    outline: none;
+}
+.contact form input,textarea{
+    position: relative;
+    padding: 20px 30px;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+}
+
+.contact button.purchase{
+    background-color: #e82d60;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 20px;
+    padding:15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.contact svg{
+    font-size: 24px;
+    margin-left: 5px;
+    stroke-width:70px;
+    stroke: #fff;
+}
+.contact path{
+    fill: #fff;
+}
+
+
+
+@media only screen and (min-width: 992px) and (max-width:1200px){
+
+
+    .contact{
+        display: flex;
+    }
+    .contact .left img{
+        height: 48vw;
+        width: 85%;
+        transform: rotate(20deg);
+        margin-top: 100px;
+        margin-left: -60px;
+    }
+    .contact .right{
+        margin: 0;
+    }
+    .contact .left{
+        align-items: flex-start;
+        display: block;        
+        background-size: 90%;
+        background-position: -40% 0px;
+        min-height: 50vh;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:1900px) {
+    .contact .left img{
+        height: 50vw;
+        width: 80%;
+        transform: rotate(20deg);
+        margin-top: 100px;
+    }
+   
+    .contact .left{
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:992px){
+    .contact .left{
+        display: none;
+    }
+    .contact .right{
+        width: 100%;
+        margin: 0;
+    }
+    .contact .right form{
+        width: 60%;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .contact .left{
+        display: none;
+    }
+    .contact .right{
+        width: 100%;
+        margin: 0;
+    }
+    .contact .right form{
+        width: 70%;
+    }
+}
